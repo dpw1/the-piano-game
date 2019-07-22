@@ -1,0 +1,23 @@
+.keyboard {
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+  max-height: 200px;
+
+  [class*="natural"] {
+    background: white;
+    &[class*="active"] {
+      background: darken(white, 5%);
+      border: 1px solid darken(white, 25%);
+    }
+    &[class*="disabled"] {
+      background: lightgray;
+    }
+  }
+  [class*="accidental"] {
+    background: black;
+    &[class*="active"] {
+      background: lighten(black, 25%);
+    }
+  }
+}
